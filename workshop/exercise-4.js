@@ -9,7 +9,9 @@ let foodPairings = {
 };
 
 const converter = (obj) => {
-  // do something
-};
-
+  const nipsey =  Object.keys(obj);
+  const hussle =  Object.values(obj);
+  return [nipsey, hussle] 
+  };
 console.log(converter(foodPairings));
+
