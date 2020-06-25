@@ -8,9 +8,18 @@ let foodPairings = {
   strawberries: 'cream',
 };
 
-// createRecommendations function
+const createRecommendations = (obj) => {
+  let arr = Object.keys(obj);
+  let order = arr.map(x => `With ${x}, is it best to have ${obj[x]}`);
+  return order;
+}
 
-// printRecommendations function
+// had to look at the solution, couldn't figure it out
 
-// function call (done)
+const printRecommendations = (recommendations) => {
+  recommendations.forEach((recommendation) => {
+    console.log(`- ${recommendation}`);
+  });
+};
+
 printRecommendations(createRecommendations(foodPairings));
